@@ -1,6 +1,6 @@
 # Lab 4 — Event Handling & Reusable Components
 
-## Student: [Твоё имя]  
+## Student: Кабылбек Жанторе 
 ## Date: 2026-02-07
 
 ---
