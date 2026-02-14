@@ -1,67 +1,37 @@
-# Lab 4 — Event Handling & Reusable Components
+# Front
 
 ## Student: Кабылбек Жанторе 
 ## Date: 2026-02-07
 
----
+Лабораторные работы по фронтенду (React): обработка событий и переиспользуемые компоненты.
 
-## 1. Lab 4.1 — RegistrationForm
+## Содержимое
 
-**Цель:**  
-Создать форму регистрации с валидацией, обработкой событий и предотвращением отправки по умолчанию.
+| Проект | Описание |
+|--------|----------|
+| [lab_4/task_1](lab_4/task_1) | **Lab 4.1** — форма регистрации с валидацией |
+| [lab_4/task_2/task2](lab_4/task_2/task2) | **Lab 4.2** — менеджер статей (AddArticle, ArticleList, ArticleItem) |
 
-**Описание решения:**
+Подробное описание заданий и решений — в [lab_4/README.md](lab_4/README.md).
 
-- Использованы **контролируемые компоненты** (value + onChange).  
-- Для каждого поля есть отдельная **функция валидации**:  
-  - `validateName(name)`  
-  - `validateEmail(email)`  
-  - `validateAge(age)`  
-- Ошибки отображаются под полями при вводе.  
-- При submit вызывается `handleSubmit(e)`, который:
-  - `e.preventDefault()` предотвращает перезагрузку
-  - Проверяет все поля
-  - Если ошибки есть → выводятся
-  - Если всё валидно → показывается сообщение "Registration successful!" и поля очищаются.
+## Запуск
 
-**Используемые технологии:**  
-React, useState, JSX, inline event handlers
+Каждый проект запускается отдельно:
 
----
-
-## 2. Lab 4.2 — ArticleManager
-
-**Цель:**  
-Рефакторинг монолитного компонента на три переиспользуемых: AddArticle, ArticleList, ArticleItem.
-
-**Описание решения:**
-
-- **ArticleManager** хранит состояние `articles`, `title`, `summary`.
-- **AddArticle** — форма для добавления статьи (через props передаются данные и обработчики).
-- **ArticleList** — выводит список статей, передавая каждую в ArticleItem.
-- **ArticleItem** — управляет своим локальным состоянием `isOpened` (показ/скрытие summary).
-- При удалении статьи вызывается `onClickRemove(id)` из родителя.
-- Использован **pattern controlled component** + **useState** для локального состояния.
-
-**Используемые технологии:**  
-React, useState, props, компонентная архитектура, map для списков.
-
----
-
-## 3. Запуск проекта
-
-Каждая задача — отдельный Vite-проект:
-
-**Task 1 (Registration Form):**
 ```bash
+# Форма регистрации (Lab 4.1)
 cd lab_4/task_1
 npm install
 npm run dev
-```
 
-**Task 2 (Article Manager):**
-```bash
+# Менеджер статей (Lab 4.2)
 cd lab_4/task_2/task2
 npm install
 npm run dev
 ```
+
+## Стек
+
+- React 18 / 19
+- Vite
+- CSS (кастомные стили, без UI-библиотек)
