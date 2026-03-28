@@ -1,20 +1,29 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { SafeAreaView, ScrollView, StyleSheet } from 'react-native';
+import { ProfileCard } from './src/components/ProfileCard';
+import { ContactSection } from './src/components/ContactSection';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <ScrollView contentContainerStyle={styles.scrollContent}>
+        <ProfileCard 
+          name="Твое Имя" 
+          role="React Native Developer" 
+          bio="Студент, изучающий кроссплатформенную мобильную разработку на Expo."
+        />
+        <ContactSection />
+      </ScrollView>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#f5f5f5',
   },
+  scrollContent: {
+    paddingVertical: 20,
+  }
 });
