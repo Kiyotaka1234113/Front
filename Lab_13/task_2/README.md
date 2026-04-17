@@ -1,6 +1,6 @@
 # Lab 13.2 — Tab Navigation with Nested Stacks
 
-**Student Name:** Нурканат Алиар
+**Student Name:** Кабылбек Жанторе
 **Date:** 11.04.2026
 
 ## Navigation Setup Explanation
