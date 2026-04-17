@@ -1,6 +1,6 @@
 # Lab 13.1 — Stack Navigation and Parameter Passing
 
-**Student Name:** Нурканат Алиар
+**Student Name:** Кабылбек Жанторе
 **Date:** 11.04.2026
 
 ## Navigation Setup Explanation
