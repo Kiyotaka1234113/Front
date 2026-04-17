@@ -1,0 +1,8 @@
+## Task 2: SSR User Dashboard & Performance Comparison
+
+### SSG vs SSR Performance Comparison
+Based on the implementation of `about.tsx` (SSG) and `about-ssr.tsx` (SSR):
+
+1. **First Load / TTFB (Time to First Byte):** The SSG page loads significantly faster because the HTML is already compiled and waiting on a CDN. The SSR page must run the server code and build the HTML before sending it to the browser.
+2. **Data Freshness:** The SSR dashboard and `about-ssr.tsx` will always display the absolute latest data. The `about.tsx` SSG page will display the time it was built, showing stale data until the next build.
+3. **Server Load:** SSR puts stress on the server (calculating analytics and fetching notifications on every single refresh). SSG puts zero load on the server after the initial build.
